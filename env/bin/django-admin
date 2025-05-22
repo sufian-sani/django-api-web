@@ -1,4 +1,4 @@
-#!/home/user/djangoproject_personal/blog-api-sample/env/bin/python3
+#!/home/sufian/Django/django-api-web/env/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
