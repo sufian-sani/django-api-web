@@ -28,6 +28,9 @@ from django.contrib import admin
 
 from quickstart import views
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
@@ -42,3 +45,5 @@ urlpatterns = [
     path('api/books/', include('books.urls')),
     path('api/blog/', include('blog.urls')),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
